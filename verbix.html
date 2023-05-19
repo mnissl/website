@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <script src="https://verbix-api.nyc3.cdn.digitaloceanspaces.com/conjugator/v2.0.2.js"></script>
+
+  <style>
+    @media print {
+      @page {
+        size: a4 portrait;
+        margin: 0;
+      }
+
+      body {
+        margin: 0;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+
+    :root {
+      --sans-font: 'PT Sans', sans-serif;
+      --serif-font: 'PT Serif', serif;
+      --my-grey: #505050;
+    }
+
+    body {
+      font-family: var(--serif-font);
+      margin: auto 15px;
+    }
+
+    h1,
+    h2 {
+      font-family: var(--sans-font);
+      margin-bottom: 0;
+    }
+
+    h1 {
+      font-family: Pacifico, cursive;
+      font-weight: normal;
+      font-size: 2.5em;
+      margin-top: 0;
+      display: inline-block;
+      grid-column: 1 / span 3;
+      grid-row: 1;
+    }
+
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: smaller;
+      letter-spacing: 0.8em;
+      margin-top: 0;
+      grid-column: 1 / span 5;
+      border-bottom: solid .75pt var(--my-grey);
+    }
+
+    div.mode {
+      grid-column: 1 / span 4;
+    }
+
+    div.mode.subjuntivo {
+      margin-top: 1em;
+    }
+
+    .label {
+      font-family: var(--sans-font);
+      text-transform: uppercase;
+      font-size: smaller;
+      letter-spacing: 0.12em;
+      font-weight: 300;
+      color: var(--my-grey);
+      display: inline-block;
+      width: 6.25em;
+    }
+
+    .pronoun {
+      color: var(--my-grey);
+      font-style: italic;
+    }
+
+    /* .normal {} */
+
+    .irregular {
+      font-weight: bold;
+    }
+
+    .orto {
+      text-decoration-line: underline;
+      text-decoration-color: var(--my-grey);
+      text-underline-offset: 0.3ex;
+    }
+
+    .arca {
+      color: purple;
+    }
+
+    .obsolete {
+      color: red;
+    }
+
+    div.conjugation {
+      margin-right: 0.5em;
+    }
+
+    div.conjugation th {
+      font-family: var(--sans-font);
+      text-transform: uppercase;
+      font-size: smaller;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      color: var(--my-grey);
+      text-align: left;
+    }
+
+    div.conjugation td:first-child {
+      display: none;
+    }
+
+    div.conjugation th:first-child {
+      display: none;
+    }
+
+    div.conjugation.withPronoun td:first-child {
+      display: table-cell;
+      text-align: right;
+      padding-right: 0.4em;
+    }
+
+    div.conjugation.withPronoun th:first-child {
+      display: table-cell;
+    }
+
+    div.conjugation.rightmost {
+      padding-left: 0.4em;
+    }
+
+    table.verbtense {
+      line-height: 1.25;
+    }
+
+    #grid-container {
+      display: inline-grid;
+    }
+
+    #simples {
+      grid-column: 4 / span 2;
+      grid-row: 1;
+      align-self: center;
+    }
+
+    .simples {
+      display: flexbox;
+      align-items: baseline;
+    }
+
+    #imperativo1p {
+      color: var(--my-grey);
+    }
+  </style>
+</head>
+
+<body>
+  <div data-verbix-conjugate-language='spa' data-verbix-conjugate-key='ab8e7bb5-9ac6-11e7-ab6a-00089be4dcbc'
+    data-verbix-conjugate-noresultfortensetext='–' id="grid-container">
+
+    <h1 data-verbix-conjugate-tense='20' onclick="askForNewVerb()"></h1>
+
+    <div id="simples">
+      <table>
+        <tr>
+          <td>
+            <div class="simples">
+              <span class="label">Participio</span>
+              <span data-verbix-conjugate-tense='22'></span>
+            </div>
+            <div class="simples">
+              <span class="label">Gerundio</span>
+              <span data-verbix-conjugate-tense='21'></span>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="mode">
+      <h2>Indicativo</h2>
+    </div>
+    <div></div>
+
+    <div id="i-presente" class="conjugation withPronoun" data-verbix-conjugate-tense='0'></div>
+
+    <div id="i-indefinido" class="conjugation pasado" data-verbix-conjugate-tense='4'></div>
+
+    <div id="i-imperfecto" class="conjugation pasado" data-verbix-conjugate-tense='2'></div>
+
+    <div id="i-futuro" class="conjugation" data-verbix-conjugate-tense='5'></div>
+
+    <div id="condicional" class="conjugation rightmost" data-verbix-conjugate-tense='7'></div>
+
+    <div class="mode subjuntivo">
+      <h2>Subjuntivo</h2>
+    </div>
+    <div></div>
+
+    <div id="s-presente" class="conjugation withPronoun" data-verbix-conjugate-tense='1'></div>
+
+    <div id="s-imperfecto-ra" class="conjugation pasado" data-verbix-conjugate-tense='25'></div>
+
+    <div id="s-imperfecto-se" class="conjugation pasado" data-verbix-conjugate-tense='26'></div>
+
+    <div id="s-futuro" class="conjugation" data-verbix-conjugate-tense='6'></div>
+
+    <div id="imperativo" class="conjugation rightmost" data-verbix-conjugate-tense='8'></div>
+  </div>
+
+
+  <script>
+    function fixImperativo() {
+      const table = document.getElementById("imperativo").querySelector("table");
+
+      if (table == null) {
+        setTimeout(fixImperativo, 1)
+        return;
+      }
+
+      const node = document.createElement("span");
+      node.innerHTML = "–"
+      node.id = "imperativo1p";
+
+      const newRow = table.insertRow(0);
+      newRow.insertCell(-1);
+      newRow.insertCell(-1).appendChild(node);
+
+      addTableHeader("i-presente", "presente");
+      addTableHeader("s-presente", "presente");
+      addTableHeader("i-indefinido", "indefinido");
+      addTableHeader("i-imperfecto", "imperfecto");
+      addTableHeader("s-imperfecto-ra", "imperfecto");
+      addTableHeader("s-imperfecto-se", "imperfecto");
+      addTableHeader("i-futuro", "futuro");
+      addTableHeader("s-futuro", "futuro");
+      addTableHeader("condicional", "condicional");
+      addTableHeader("imperativo", "imperativo");
+    }
+
+    function addTableHeader(elementId, tense) {
+      const table = document.getElementById(elementId).querySelector("table");
+      const header = table.createTHead();
+      const row = header.insertRow(0);
+
+      let th = document.createElement("th");
+      row.appendChild(th);
+
+      th = document.createElement("th");
+      th.innerHTML = tense;
+      row.appendChild(th);
+    }
+
+    function conjugate(verb) {
+      document.title = verb;
+      verbix.conjugate(verb);
+      setTimeout(fixImperativo, 1);
+    }
+
+    window.onload = function () {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+
+      let verb = urlParams.get('verb');
+
+      if (!verb)
+        verb = "faltar";
+
+      conjugate(verb);
+    }
+
+    function askForNewVerb() {
+      const verb = prompt("Verbo a conjugar:");
+
+      if (!verb)
+        return;
+
+      const table = document.getElementById("imperativo").querySelector("table");
+      table?.remove();
+
+      conjugate(verb);
+    }
+  </script>
+</body>
+
+</html>
